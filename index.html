@@ -36,33 +36,46 @@ border-color: rgb(243, 197, 52); background-color: rgb(254, 254, 184); padding:
 <center><span style="background-color:#00FEFE"><font size="50" color="pink" background-color="white" face="고딕"> " ☆since 2021 LLM바라기 효정 영아 현용☆<br>업데이트 중 >_<  ㅎ "</font></span></center>
 <p>
 
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        .container {
-          width: 200px;
-          height: 200px;
-          text-align: center;
-        }
-        #img {
-          width: 100%;
-          height: 100%;
-        }
-      </style>
-    </head>
-    <body>
-  <div class="container">
-    <img id="img" src="./images/도라에몽.jpg" />
-    <button onclick="toggleImg()">toggle</button>
-  </div>
-  <script>
-    function toggleImg() {
-      document.getElementById("img").src = "./images/도라미.png";
-    }
-  </script>
-</body>
-  </html>
+
+
+
+  <div class="picBox">
+       <img class="pic" src="도라에몽.jpg" />
+       <div class="btn">
+         <button class="beforeBtn">before</button>
+         <span class="picNo">1</span>
+         <button class="afterBtn">after</button>
+       </div>
+     </div>
+
+     <script>
+       let pic = document.querySelector(".pic");
+       let picNo = document.querySelector(".picNo");
+
+       let i = 1;
+
+       document.querySelector(".afterBtn").addEventListener('click', function(idx) {
+
+         if (idx) {
+           if (i == 8) return;
+           i++;
+         }
+         pic.setAttribute("src", "도라미.png" + i);
+         picNo.innerHTML = i;
+
+       });
+
+       document.querySelector(".beforeBtn").addEventListener('click', function(idx) {
+
+         if (idx) {
+           if (i == 1) return;
+           i--;
+         }
+         pic.setAttribute("src", "도라에몽.jpg" + i);
+         picNo.innerHTML = i;
+       });
+
+     </script>
 
 
 
