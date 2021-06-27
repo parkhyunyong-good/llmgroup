@@ -37,38 +37,16 @@ border-color: rgb(243, 197, 52); background-color: rgb(254, 254, 184); padding:
 <p>
 
 
-
-
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        .container {
-          width: 200px;
-          height: 200px;
-          text-align: center;
-        }
-        #img {
-          width: 100%;
-          height: 100%;
-        }
-      </style>
-    </head>
-    <body>
-    <div class="container">
-      <img id="img" src="도라에몽.jpg" />
-      <button onclick="toggleImg()">toggle</button>
-    </div>
-    <script>
-      function toggleImg() {
-        document.getElementById("img").src = "카드캡터체리.jpg";
-      }
-    </script>
-  </body>
-  </html>
+  <div style="cursor: pointer;" onClick="var a=this.getElementsByTagName('img');var b=this.getAttribute('num')*1;b=(b+1>=a.length?0:b+1);for(var i=0;i<a.length;i++){this.getElementsByTagName('img')[i].style.display=(i==b?'block':'none');}this.setAttribute('num',b);" num="0">
+  	<img src="도라에몽.jpg" />
+  	<img src="카드캡터체리.jpg" style="display: none;" />
+  	<img src="토개피.jpg" style="display: none;" />
+  </div>
 
 
 
+
+</p>
 
 
 
